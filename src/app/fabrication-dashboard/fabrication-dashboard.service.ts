@@ -17,4 +17,12 @@ export class FabricationDashboardService {
       })
     );
   }
+
+  getPartsTableDetails(): Observable<any> {
+    return this.http.get<any>(ComponentsEndPoints.GET_PARTS_TABLE.PROD).pipe(
+      map((result:any)=>{
+        return result;
+      })
+    );
+  }
 }

@@ -14,30 +14,16 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-        </tr>
+        <tr *ngFor="let assembly of assemblies,index as id">  
+          <td>{{id+1}}</td>
+          <td>{{ assembly.assembly_id }}</td>  
+          <td>{{ assembly.process_desc }}</td>  
+          <td>{{ assembly.sub_assembly_id }}</td>  
+          <td>{{ assembly.start_date }}</td>  
+          <td>{{ assembly.end_date }}</td> 
+        </tr> 
+       
+        
       </tbody>
     </table>
   </div>

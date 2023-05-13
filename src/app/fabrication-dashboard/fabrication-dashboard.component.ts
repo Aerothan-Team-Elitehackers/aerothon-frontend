@@ -32,12 +32,12 @@ ngOnInit() {
     data: {
       // values on X-Axis
       labels: [
-        '#33567F',
-        '#416C9F',
-        '#4C7DB7',
-        '#8AA3CC',
-        '#A3B5D4',
-        '#CCD5E6',
+        'Tub',
+        'Wash tub',
+        'Spin Tub',
+        'Brake',
+        'Handle',
+        'Cover',
       ],
       datasets: [
         {
@@ -61,6 +61,10 @@ ngOnInit() {
 
 
   this.fabricationDashboardService.getFabricationTableDetails().subscribe((response)=>{
+    console.log(response)
+  })
+
+  this.fabricationDashboardService.getPartsTableDetails().subscribe((response)=>{
     console.log(response)
   })
 

@@ -17,5 +17,9 @@ export const ComponentsEndPoints={
     POST_LOGIN_CREDS:{
         DEV:devHost+"/auth/signin",
         PROD:prodHost+"/auth/signin"
+    },
+    GET_PARTS_TABLE:{
+        DEV:devHost+"/parts",
+        PROD:prodHost+"/parts"
     }
 }
