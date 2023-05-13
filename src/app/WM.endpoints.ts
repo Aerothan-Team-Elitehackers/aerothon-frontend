@@ -3,19 +3,19 @@ let prodHost = 'https://aerothan-elite-hackers.netlify.app/.netlify/functions/ap
 
 export const ComponentsEndPoints={
     GET_FABRICATION_TABLE:{
-        DEV:devHost+"/<rest api url>",
-        PROD:prodHost+"/<rest api url>"
+        DEV:devHost+"/fabrication",
+        PROD:prodHost+"/fabrication"
     },
     GET_ASSEMBLY_TABLE:{
-        DEV:devHost+"/<rest api url>",
-        PROD:prodHost+"/<rest api url>"
+        DEV:devHost+"/assembly",
+        PROD:prodHost+"/assembly"
     },
     GET_SUB_ASSEMBLY_TABLE:{
-        DEV:devHost+"/<rest api url>",
-        PROD:prodHost+"/<rest api url>"
+        DEV:devHost+"/sub_assembly",
+        PROD:prodHost+"/sub_assembly"
     },
     POST_LOGIN_CREDS:{
-        DEV:devHost+"/<rest api url>",
-        PROD:prodHost+"/<rest api url>"
+        DEV:devHost+"/auth/signin",
+        PROD:prodHost+"/auth/signin"
     }
 }
