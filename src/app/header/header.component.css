@@ -1,0 +1,25 @@
+.navRow {
+  background-color: #07193c;
+  color: white;
+}
+.navText{
+    float: right;
+    display: flex;
+    justify-content: right;
+    /* padding-right: 2% !important; */
+}
+
+.navTitleText{
+    font-size: x-large;
+    font-weight: bolder;
+    padding-left: 5% !important;
+}
+
+.navSubText{
+    padding-left: 3%;
+    padding-right:3%;
+}
+
+.mainWrap{
+    width: 100% !important;
+}

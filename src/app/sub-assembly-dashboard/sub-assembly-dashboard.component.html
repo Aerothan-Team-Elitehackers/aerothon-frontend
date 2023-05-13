@@ -1,0 +1,180 @@
+<div  id="subAssemblyStyle">
+  <app-header></app-header>
+  <div class="pt-4">
+    <div class="container containerBorder">
+      <div class="formHeading pt-4">
+        Form For Requesting Washing Machine Part
+      </div>
+      <div class="form-group row pt-4">
+        <label for="inputPassword" class="col-sm-2 col-form-label"
+          >Washing Machine ID</label
+        >
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="example FA_WM12"
+          />
+        </div>
+      </div>
+      <div class="form-group row pt-2">
+        <label for="inputPassword" class="col-sm-2 col-form-label"
+          >Process Type</label
+        >
+        <div class="col-sm-10">
+          <select id="inputState" class="form-control">
+            <option selected>Choose...</option>
+            <option>Transmission Assembly</option>
+            <option>Electrical Assembly</option>
+            <option>Tub assemblies</option>
+            <option>Spot Weld Assembly</option>
+            <option>Weld Assembly</option>
+            <option>Mechanical assembly</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row pt-2">
+        <label for="inputPassword" class="col-sm-2 col-form-label"
+          >Choose Part</label
+        >
+        <div class="col-sm-10">
+          <select id="inputState" class="form-control">
+            <option selected>Choose...</option>
+            <option>tub</option>
+            <option>pump</option>
+            <option>balance ring</option>
+            <option>spin tub</option>
+            <option>wash tub</option>
+            <option>transmission gears</option>
+            <option>plastic brackets</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row pt-2">
+        <label for="inputPassword" class="col-sm-2 col-form-label"
+          >Estimated Start Date</label
+        >
+        <div class="col-sm-10">
+          <input type="date" class="form-control" placeholder="" />
+        </div>
+      </div>
+      <div class="pt-4">
+        <button type="submit" class="btn btn-primary">Submit Request</button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <hr class="hrStyle" />
+  </div>
+  <div class="container">
+    <div class="formHeading pt-4 pb-4">Table of Requests</div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Request Id</th>
+          <th scope="col">Process</th>
+          <th scope="col">Part Requested</th>
+          <th scope="col">Part process Id</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">End Date</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>
+            <button
+              class="btn btn-info"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              (click)="OpenModal()"
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>
+            <button
+              class="btn btn-info"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              (click)="OpenModal()"
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>
+            <button
+              class="btn btn-info"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              (click)="OpenModal()"
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- <div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+> -->
+  <div class="modal-dialog modalStyle" role="document" id="ModalToEdit">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Date</h5>
+        <div class="" style="font-weight: bold;" (click)="closeModal()" type="button">x</div>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group row pt-2">
+            <label for="inputPassword" class="col-sm-4 col-form-label"
+              >Estimated End Date</label
+            >
+            <div class="col-sm-8">
+              <input type="date" class="form-control" placeholder="" />
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer pt-4">
+        
+        <button type="button" class="btn btn-primary"(click)="closeModal()">Save changes</button>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->

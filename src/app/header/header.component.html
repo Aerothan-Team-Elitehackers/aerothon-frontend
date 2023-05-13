@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="row pt-3 pb-3 navRow">
+    <div class="col-6 navTitleText">WASHING MACHINE MANUFACTURING MODULE</div>
+    <div class="col-6 navText">
+      <span class="navSubText" (click)="fabricationRoute()" *ngIf="isFabrication"  >Fabrication</span>
+
+      <span class="navSubText" (click)="subARoute()" *ngIf="isSubAssembly">Sub-Assembly</span>
+      <span class="navSubText" (click)="assemblyRoute()" *ngIf="isAssembly">Assembly</span>
+      <span class="navSubText"  (click)="LogOut()">LogOut</span>
+    </div>
+  </div>
+</div>

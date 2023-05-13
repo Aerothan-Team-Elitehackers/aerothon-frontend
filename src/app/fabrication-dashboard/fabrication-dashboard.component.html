@@ -1,0 +1,60 @@
+<div class="container">
+  <h2 *ngIf="!isAdmin">You are not authorised to access this page</h2>
+</div>
+<div >
+  <app-header></app-header>
+
+  <div class="container">
+    <div class="formHeading pt-4 pb-4">Parts Requested</div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Request Id</th>
+          <th scope="col">Part</th>
+          <th scope="col">Raw Material</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">In Date</th>
+          <th scope="col">Out Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <hr class="hrStyle" />
+  </div>
+  <div class="formHeading pt-4 pb-4">Requested Parts</div>
+  <div class="chart-container1 ">
+    <canvas id="MyChart">{{ chart }}</canvas>
+  </div>
+</div>

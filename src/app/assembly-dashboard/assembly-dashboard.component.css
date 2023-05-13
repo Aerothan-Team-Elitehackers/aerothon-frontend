@@ -1,0 +1,12 @@
+.formHeading{
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+    color: #103887;
+}
+
+.hrStyle{
+    border: 1px solid rgba(13,110,253) ;
+    color: rgb(13, 109, 253);
+   
+}

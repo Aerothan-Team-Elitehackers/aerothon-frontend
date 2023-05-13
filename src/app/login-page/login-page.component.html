@@ -1,0 +1,44 @@
+<div class="LoginWrap">
+  <div class="subWrap">
+    <div class="webTitle">WASHING MACHINE MANUFACTURING PLATFORM</div>
+    <div class="sub2Wrap">
+      <div class="card cardWrap">
+        <div class="card-body">
+          <div class="welcomeText">
+            <div class="textColor">WELCOME</div>
+          </div>
+          <div class="subText">
+            Enter your credentials to enter your account
+          </div>
+
+          <div class="pl-8 pr-8 pt-4 pb-2">
+            <input
+              type="username"
+              class="form-control"
+              id="username"
+              aria-describedby="emailHelp"
+              placeholder="Enter username"
+              [(ngModel)]="username"
+            />
+          </div>
+          <div class="pl-8 pr-8 pt-2 pb-2">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder=" Enter Password"
+              [(ngModel)]="password"
+            />
+          </div>
+
+          <div class="pl-4 pr-4 pt-2 pb-2">
+            <button type="submit" class="btn btn-primary loginButton" (click)="LogIn(username,password)">
+              Log In
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="error" id="errorText">Wrong username or password. Please try again.</div>
+  </div>
+</div>
