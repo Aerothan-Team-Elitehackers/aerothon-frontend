@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            
             "outputPath": "dist/wmmanufacturing",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -66,12 +67,17 @@
               "browserTarget": "WMmanufacturing:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options":{
+            "proxyConfig": "src/proxy.conf.json"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+            
             "browserTarget": "WMmanufacturing:build"
+            
           }
         },
         "test": {

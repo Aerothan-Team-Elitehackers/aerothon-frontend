@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://aerothan-elite-hackers.netlify.app/.netlify/functions/api",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

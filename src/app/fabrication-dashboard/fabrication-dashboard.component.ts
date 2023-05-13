@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import Chart from 'chart.js/auto';
 import { FabricationDashboardService } from './fabrication-dashboard.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fabrication-dashboard',
@@ -10,9 +11,19 @@ import { FabricationDashboardService } from './fabrication-dashboard.service';
 export class FabricationDashboardComponent {
 public isAdmin=true;
 public  chart: any;
-
-constructor(private fabricationDashboardService:FabricationDashboardService){
-
+public isFE=false;
+constructor(private fabricationDashboardService:FabricationDashboardService,private router: Router){
+  const navigation = this.router.getCurrentNavigation();
+    const state = navigation!.extras.state as {
+      role: string;
+    };
+    
+    console.log('User role is ', state.role);
+    if (state.role == 'fabrication') {
+      
+      this.isFE = true;
+     
+    }
 }
 ngOnInit() {
   this.chart= new Chart('MyChart', {

@@ -80,7 +80,7 @@
           <th scope="col">Part process Id</th>
           <th scope="col">Start Date</th>
           <th scope="col">End Date</th>
-          <th scope="col"></th>
+          <th scope="col" *ngIf="isSubAssembly"></th>
         </tr>
       </thead>
       <tbody>
@@ -92,7 +92,7 @@
           <td>@mdo</td>
           <td>@mdo</td>
           <td>@mdo</td>
-          <td>
+          <td *ngIf="isSubAssembly">
             <button
               class="btn btn-info"
               data-toggle="modal"
@@ -111,7 +111,7 @@
           <td>@mdo</td>
           <td>@mdo</td>
           <td>@mdo</td>
-          <td>
+          <td *ngIf="isSubAssembly">
             <button
               class="btn btn-info"
               data-toggle="modal"
@@ -130,7 +130,7 @@
           <td>@mdo</td>
           <td>@mdo</td>
           <td>@mdo</td>
-          <td>
+          <td *ngIf="isSubAssembly">
             <button
               class="btn btn-info"
               data-toggle="modal"

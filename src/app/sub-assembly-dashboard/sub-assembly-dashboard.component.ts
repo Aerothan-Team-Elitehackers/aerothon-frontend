@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sub-assembly-dashboard',
@@ -6,6 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./sub-assembly-dashboard.component.css']
 })
 export class SubAssemblyDashboardComponent {
+  isSubAssembly=false;
+  constructor(private router: Router) {
+    const navigation = this.router.getCurrentNavigation();
+    const state = navigation!.extras.state as {
+      role: string;
+    };
+    
+    console.log('User role is ', state.role);
+    if (state.role == 'sub-assembly') {
+      
+      this.isSubAssembly = true;
+     
+    }
+   
+  }
   ngOnInit(){
     document.getElementById("ModalToEdit")!.style.display="none";
     document.getElementById("subAssemblyStyle")!.style.filter="unset";
