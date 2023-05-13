@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import Chart from 'chart.js/auto';
+import { FabricationDashboardService } from './fabrication-dashboard.service';
 
 @Component({
   selector: 'app-fabrication-dashboard',
@@ -10,7 +11,9 @@ export class FabricationDashboardComponent {
 public isAdmin=true;
 public  chart: any;
 
+constructor(private fabricationDashboardService:FabricationDashboardService){
 
+}
 ngOnInit() {
   this.chart= new Chart('MyChart', {
     type: 'bar', //this denotes tha type of chart
@@ -44,6 +47,11 @@ ngOnInit() {
       aspectRatio:2.5,
     },
   });
+
+
+  this.fabricationDashboardService.getFabricationTableDetails().subscribe((response)=>{
+    console.log(response)
+  })
 
 }
 }

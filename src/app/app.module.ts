@@ -9,6 +9,8 @@ import { AssemblyDashboardComponent } from './assembly-dashboard/assembly-dashbo
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+// import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
     LoginPageComponent
   ],
   imports: [
+    HttpClientModule,
+    // HttpClient,
     FormsModule,
     BrowserModule,
     AppRoutingModule
