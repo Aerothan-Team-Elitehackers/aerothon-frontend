@@ -1,0 +1,39 @@
+PARTS TABLE - fabrication dept
+
+part_id     part_name    raw_material    quantity   average_time
+P1  		Tub			steel
+
+
+fabrication table - fabrication dept
+
+req_part_id     part_id    in_date   out_date   comment_from_engineer
+T1234			P1
+T13			P1
+T45			P1
+
+
+Process Table - sub-assembly
+
+req_assembly_id    process   req_part_id    machine_id    start_date    end_date   comment_from_engineer 
+
+
+
+Assembly table
+
+testing_id     testing_process_desc   re_assembly_id    start_date   end_date
+
+
+
+
+
+
+UI PART
+
+4 roles
+
+
+fabrication engineer - parts requested table, chart of parts
+sub-assembly engineer - sub-assembly process table, parts requested table
+assembly engineer - assembly status table, sub-assembly process table 
+admin full UI 
+
